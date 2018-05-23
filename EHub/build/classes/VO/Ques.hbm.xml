@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.Ques" table="Ques">
+   <id name="quesid" type="long" column="QUESID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="ques">
+   <column name="Question"/>
+  </property>
+  
+  <property name="ans1">
+   <column name="Answer1"/>
+  </property>
+
+
+<property name="ans2">
+   <column name="Answer2"/>
+  </property>  
+  
+  
+  <property name="ans3">
+   <column name="Answer3"/>
+  </property>
+  
+  <property name="ans4">
+   <column name="Answer4"/>
+  </property>
+  
+  <property name="correctAns">
+  <column name="CorrectAnswer"/>
+  </property>
+ 
+ <property name="marks">
+  <column name="Marks"/>
+  </property>
+  
+  <many-to-one name="exam_id" class="VO.Exam" column="exam_id"></many-to-one>
+ </class>
+</hibernate-mapping>

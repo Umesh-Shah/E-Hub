@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.Exam" table="Exams">
+   <id name="exam_id" type="long" column="ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="examName">
+   <column name="ExamName"/>
+  </property>
+  <property name="examDes">
+  <column name="ExamDescription"/>
+  </property>
+  
+  <property name="marks">
+  <column name="TotalMarks"/>
+  </property>
+  <property name="duration">
+  <column name="TotalDuration"/>
+  </property>
+  <property name="no_ques">
+  <column name="TotalQuestions"/>
+  </property>
+  
+ </class>
+</hibernate-mapping>

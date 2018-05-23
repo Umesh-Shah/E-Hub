@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.Result" table="Result" lazy="false">
+   <id name="resultid" type="long" column="RESID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="result">
+   <column name="Result"/>
+  </property>
+  
+    <many-to-one name="exam_id" cascade="delete" column="ID" ></many-to-one>
+  	
+  	
+  
+ </class>
+</hibernate-mapping>

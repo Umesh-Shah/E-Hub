@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+  <class name="VO.Signup" table="User_Registration" lazy="false">
+  
+   <id name="userID" type="long" column="userID" ><generator class="increment"/> </id>
+   
+  <property name="email"><column name="email" /></property>
+    
+   <property name="firstName"><column name="firstName" /></property>
+   
+   <property name="lastName"><column name="lastName" /></property>
+   
+   <property name="password"><column name="password" /></property>
+   
+   <property name="location"><column name="location" /></property>
+   
+   <property name="service"><column name="service" /></property>
+   
+   
+   <set name="linkset" table="lsc_link_mst" cascade="delete" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userID" not-null="true" />
+            </key>
+            
+            <one-to-many class="vo.LinkVO" />
+   </set>
+   
+ </class>
+</hibernate-mapping>

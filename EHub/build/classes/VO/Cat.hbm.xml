@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.Cat" table="Category" lazy="false">
+   <id name="id" type="long" column="ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="catName">
+   <column name="CategoryName"/>
+  </property>
+  <property name="catDes">
+  <column name="CategoryDescription"/>
+  </property>
+  
+  <!-- <set name="subcatset" table="subcategory" inverse="true" cascade="delete" lazy="true">
+  
+  <key>
+  <column name="id" not-null="true"></column>
+  
+  </key>
+  
+  <one-to-many class="VO.Subcat"/>
+  </set>
+   -->
+  
+ </class>
+</hibernate-mapping>

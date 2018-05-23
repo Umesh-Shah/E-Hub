@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.Link" table="EH_link_mst" lazy="false" >
+  
+   <id name="linkID" type="long" column="linkID" ><generator class="increment"/> </id>
+ 
+   <property name="link"><column name="link" /></property>
+   
+   <property type="long" name="dispatchDT"><column name="dispatchDT" /></property>
+   
+   <property type="long" name="activationDT"><column name="activationDT" /></property>
+   
+   <property name="status"><column name="status" /></property>
+   
+   <many-to-one name="userID" class="VO.Signup"  ></many-to-one>
+  
+  
+   
+ </class>
+</hibernate-mapping>
