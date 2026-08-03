@@ -1,0 +1,3 @@
+jwt:
+  secret: test-only-secret-key-not-for-production-use-0123456789abcdef
+  expiration-minutes: 60
